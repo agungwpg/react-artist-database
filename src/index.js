@@ -1,8 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter, Route} from 'react-router-dom'
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import Home from './components/home/home'
+import Artist from './components/artist/artist'
+
+export class App extends Component {
+  render() {
+    return (
+        <BrowserRouter>
+            <div>
+                <Route exact path="/" component={Home}/>
+                <Route path="/artist/:artistId" component={Artist}/>
+            </div>
+        </BrowserRouter>
+    )
+  }
+}
+
+ReactDOM.render(<App/>,document.querySelector('#root'))
