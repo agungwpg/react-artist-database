@@ -11,7 +11,7 @@ export class App extends Component {
         <BrowserRouter>
             <div>
                 <Route exact path="/" component={Home}/>
-                <Route path="/artist/:artistId" component={Artist}/>
+                <Route path="/artist/:artistID" component={Artist}/>
             </div>
         </BrowserRouter>
     )
