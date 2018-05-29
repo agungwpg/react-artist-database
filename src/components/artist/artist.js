@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from './header'
+import AlbumList from './albumList'
 
 const URL_API = `http://localhost:3000/artists`
 
@@ -36,6 +37,7 @@ export class Artist extends Component {
               {this.state.artist.bio}
             </p>
           </div>
+          <AlbumList albumIMG={this.state.artist.albums}/>
         </div>
       </div>
     )
